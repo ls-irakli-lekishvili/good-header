@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: block;
+    background-color: rgb(19, 12, 29);
+    transition: transform 2s ease-in-out;
+}
+
+#text {
+    color: #f7fffc;
+    padding: 20px;
+    text-align: center;
+}
+
+.imgSettings{
+    border:none;
+    width:100%;
+    height:auto;
+}
+
+.new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
