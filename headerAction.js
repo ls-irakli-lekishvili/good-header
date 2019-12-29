@@ -1,16 +1,13 @@
-let lastscroll = 0;
-let h = document.getElementById('new');
+let LastScroll = 0;
 
-window.addEventListener('scroll',scroll);
-function scroll(){
-    let st = window.pageYOffset || document.documentElement.scrollTop;
+window.onscroll = function() {
+    let CurrentPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if(st > 150 && st > lastscroll){
-            h.removeAttribute('class');
+    if(LastScroll > CurrentPosition){
+        document.getElementsByTagName('header')[0].style.top = '0';
     }
-    else if(st < lastscroll){
-        h.setAttribute('class','new');
+    else {
+        document.getElementsByTagName('header')[0].style.top = '-50px';
     }
-
-    lastscroll = st;
-}
+    LastScroll = CurrentPosition;
+};
